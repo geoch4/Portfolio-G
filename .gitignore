@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Local dev artefacts
+/.next-dev*/
+/.dev-server*.log
+/tmp/
+/output/

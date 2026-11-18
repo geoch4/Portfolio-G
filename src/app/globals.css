@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080b14;
+  --foreground: #f8fafc;
+  --surface: #111827;
+  --surface-soft: #131a2a;
+  --border-subtle: rgba(148, 163, 184, 0.18);
+  --accent-blue: #38bdf8;
+  --accent-indigo: #818cf8;
+  --accent-violet: #a78bfa;
 }
 
 @theme inline {
@@ -12,15 +18,67 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hero-pulse-travel {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-cross-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 7rem 7rem;
+  }
+}
+
+.hero-medical-pattern {
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.14) 1px, transparent 1px);
+  background-size: 1rem 3rem, 3rem 1rem;
+  background-position: 1rem 0, 0 1rem;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+  animation: hero-cross-drift 28s linear infinite;
+}
+
+.hero-pulse {
+  pointer-events: none;
+}
+
+.hero-pulse svg {
+  animation: hero-pulse-travel 13s linear infinite;
+}
+
+.hero-pulse-line {
+  fill: none;
+  stroke: #38bdf8;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-medical-pattern,
+  .hero-pulse svg {
+    animation: none;
+  }
 }

@@ -1,24 +1,24 @@
 ﻿// src/app/layout.tsx
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
-    title: 'Portfolio Georgia Chalkia',
-    description: 'En portfolio för legitimerad sjuksköterska Georgia Chalkia',
+    title: 'Georgia Chalkia | Distriktssköterska & HealthTech',
+    description: 'Georgia Chalkia – legitimerad distriktssköterska med klinisk erfarenhet och kunskap i systemutveckling, inriktad mot HealthTech och digital vård.',
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: {
+    children,
+}: {
     children: React.ReactNode;
 }) {
     return (
-        // UPPDATERING: Lägg till className={inter.className} här för att använda typsnittet
-        <html lang="sv" className={inter.className}>
-        <body>{children}</body>
+        <html lang="sv" className={`${inter.variable} ${playfair.variable}`}>
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
