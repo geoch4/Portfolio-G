@@ -7,6 +7,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Distriktssköterska',
         location: 'Capio Go och Meliva vårdcentral Masthuggskajen',
         period: 'Januari 2026 - 2026 · Avslutade uppdrag',
+        tags: ['Primärvård', 'Triage', 'Digital vård'],
         description: [
             'Bedömning, triage och egenvårdsråd på mottagning, i telefon och via chatt och video.',
             'Vaccinationer, hälsokontroller och hänvisning till rätt vårdnivå.',
@@ -16,6 +17,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Distriktssköterska',
         location: 'ECT- och rTMS-mottagningen, Sahlgrenska Universitetssjukhuset',
         period: 'Januari 2025 - Januari 2026',
+        tags: ['Psykiatri', 'Remissflöden', 'Taligenkänning'],
         description: [
             'Samordnade behandlingar mellan remitterande psykiatriska enheter, läkare och mottagningen.',
             'Såg hur remisserna fastnade mellan två IT-system. Tog initiativ till ett koncept för en digital remiss- och prioriteringslösning, och drev införandet av taligenkänning.',
@@ -25,6 +27,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Klinikansvarig vaccinationssjuksköterska',
         location: 'Min Doktor',
         period: 'Mars 2022 - Januari 2025',
+        tags: ['Verksamhetsansvar', 'Arbetsflöden', 'Vaccination'],
         description: [
             'Ansvarig för mottagningens drift, försäljning och planering.',
             'Arbetade på Min Doktors mottagningar i hela VGR och samarbetade med Apotek Hjärtat på varje ort.',
@@ -36,6 +39,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Legitimerad sjuksköterska',
         location: 'Vacant Vårdbemanning',
         period: '2022 - 2023 · Extrauppdrag, timanställning',
+        tags: ['Hemsjukvård', 'Äldreboende'],
         description: [
             'Uppdrag inom hemsjukvård och äldreboende, bland annat i Halland och i Norge.',
         ],
@@ -44,6 +48,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Sjuksköterska och samordnande forskningssjuksköterska',
         location: 'Beroendemedicin, Sahlgrenska Universitetssjukhuset',
         period: 'Mars 2021 - Mars 2022 · Delad tjänst, klinik och forskning',
+        tags: ['Klinisk forskning', 'GCP', 'Beroendemedicin'],
         description: [
             'Klinik: abstinensbehandling, läkemedelshantering och omvårdnad vid alkoholavgiftning.',
             'Forskning: del av forskarteamet i NordAlc-projektet om alkoholavgiftning.',
@@ -55,6 +60,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Sjuksköterska',
         location: 'Psykiatri och beroendevård, Sahlgrenska Universitetssjukhuset',
         period: 'Juni 2017 - Februari 2022',
+        tags: ['Psykiatri', 'Beroendevård', 'Arbetsledning'],
         description: [
             'Allmänpsykiatri och akut beroendevård för unga vuxna och vuxna.',
             'Läkemedelshantering inom CNS-området och akuta medicinska bedömningar.',
@@ -66,6 +72,7 @@ export const workExperience: CvEntryData[] = [
         title: 'Legitimerad sjuksköterska',
         location: 'Euromedica Arogi, Larisa, Grekland',
         period: 'Maj 2014 - December 2016',
+        tags: ['Rehabilitering', 'Ortopedi', 'Stroke'],
         description: [
             'Ortopedi, stroke- och rehabiliteringsvård, med läkemedelshantering.',
             'Rehabiliteringsplaner tillsammans med fysioterapeuter, arbetsterapeuter och läkare.',

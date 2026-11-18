@@ -7,19 +7,6 @@ import { getLocalizedData } from '@/lib/localizedData';
 import SectionHeader from '@/components/ui/SectionHeader';
 import SkillChip from '@/components/ui/SkillChip';
 
-const getWorkTags = (title: string, description: string[]) => {
-    const text = `${title} ${description.join(' ')}`.toLowerCase();
-    const tags: string[] = ['Healthcare'];
-
-    if (text.includes('forsk') || text.includes('research') || text.includes('gcp')) tags.push('Research');
-    if (text.includes('vaccin') || text.includes('hpv')) tags.push('Life Science');
-    if (text.includes('samord') || text.includes('ansvar') || text.includes('drift') || text.includes('introduktion')) tags.push('Leadership');
-    if (text.includes('kommunikation') || text.includes('rådgivning') || text.includes('collaborat') || text.includes('samarbet')) tags.push('Communication');
-    if (text.includes('dokumentation') || text.includes('digital')) tags.push('Digitalisation');
-
-    return [...new Set(tags)].slice(0, 4);
-};
-
 const WorkExperienceSection = () => {
     const { locale, t } = useI18n();
     const { work } = getLocalizedData(locale);
@@ -37,7 +24,7 @@ const WorkExperienceSection = () => {
                     <div className="grid gap-5">
                     {latestWork.map((job, index) => (
                         <div
-                            key={index}
+                            key={`${job.title}-${job.location}`}
                             className="group relative rounded-3xl border border-white/10 bg-[#111827] p-6 shadow-2xl shadow-black/15 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300/30 hover:bg-[#131a2a] md:ml-12"
                         >
                             <div className="flex items-start gap-4">
@@ -45,16 +32,23 @@ const WorkExperienceSection = () => {
                                     {index + 1}
                                 </div>
                                 <div>
-                                    <p className="text-xs font-semibold text-sky-300 uppercase tracking-[0.2em]">{job.period}</p>
+                                    {job.period && (
+                                        <p className="text-xs font-semibold text-sky-300 uppercase tracking-[0.2em]">{job.period}</p>
+                                    )}
                                     <h3 className="font-[family-name:var(--font-playfair)] font-bold text-2xl text-white mt-2 leading-snug">{job.title}</h3>
                                     <p className="text-sm text-slate-400 mt-1">{job.location}</p>
-                                    <div className="mt-4 flex flex-wrap gap-2">
-                                        {getWorkTags(job.title, job.description).map((tag) => (
-                                            <SkillChip key={tag} tone={tag === 'Research' ? 'violet' : tag === 'Digitalisation' ? 'blue' : 'slate'}>
-                                                {tag}
-                                            </SkillChip>
-                                        ))}
-                                    </div>
+                                    {job.description[0] && (
+                                        <p className="mt-3 max-w-3xl leading-relaxed text-slate-300">{job.description[0]}</p>
+                                    )}
+                                    {job.tags && job.tags.length > 0 && (
+                                        <div className="mt-4 flex flex-wrap gap-2">
+                                            {job.tags.map((tag) => (
+                                                <SkillChip key={tag} tone="slate">
+                                                    {tag}
+                                                </SkillChip>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>

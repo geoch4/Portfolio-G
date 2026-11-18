@@ -28,7 +28,7 @@ type Messages = {
         availability: string; availabilityValue: string; references: string; referencesValue: string;
         digitalEyebrow: string; digitalTitle: string; digitalBody: string; digitalItems: string[];
     };
-    projects: { eyebrow: string; title: string; intro: string; viewTechnology: string; status: string; focus: string; tech: string };
+    projects: { eyebrow: string; title: string; intro: string; status: string; focus: string; tech: string; code: string; frontend: string; backend: string; demo: string };
     work: { eyebrow: string; title: string; fullCv: string };
     education: { eyebrow: string; title: string };
     courses: { eyebrow: string; title: string; all: string; less: string };
@@ -110,7 +110,7 @@ const messages: Record<Locale, Messages> = {
             rolesTitle: 'Roller där min profil passar',
             roles: ['E-hälsa', 'Implementation', 'Systemförvaltning', 'Systemägare', 'Klinisk applikationsspecialist', 'Produktspecialist inom HealthTech', 'Kliniska prövningar'],
         },
-        projects: { eyebrow: 'Projects', title: 'Projekt där vård och teknik möts', intro: 'Ett urval av projekt som visar hur jag arbetar med system, användarflöden och digitala lösningar – flera med direkt koppling till vården.', viewTechnology: 'Explore technology', status: 'Status', focus: 'Focus', tech: 'Tech stack' },
+        projects: { eyebrow: 'Projekt', title: 'Projekt där vård och teknik möts', intro: 'Ett urval av projekt som visar hur jag arbetar med system, användarflöden och digitala lösningar – flera med direkt koppling till vården.', status: 'Status', focus: 'Fokus', tech: 'Teknik', code: 'Kod på GitHub', frontend: 'Frontend på GitHub', backend: 'Backend på GitHub', demo: 'Demo' },
         skills: {
             eyebrow: 'Styrkor', title: 'Kompetens för digital vård',
             intro: 'Klinisk erfarenhet kombinerad med förståelse för hur vårdens system, data och arbetsflöden används i praktiken.',
@@ -185,7 +185,7 @@ const messages: Record<Locale, Messages> = {
             rolesTitle: 'Roles where this profile fits',
             roles: ['eHealth', 'Implementation', 'System management', 'System owner', 'Clinical application specialist', 'HealthTech product specialist', 'Clinical trials'],
         },
-        projects: { eyebrow: 'Projects', title: 'Projects where healthcare and technology meet', intro: 'Selected projects showing how I work with systems, user flows and digital solutions – several directly connected to healthcare.', viewTechnology: 'Explore technology', status: 'Status', focus: 'Focus', tech: 'Tech stack' },
+        projects: { eyebrow: 'Projects', title: 'Projects where healthcare and technology meet', intro: 'Selected projects showing how I work with systems, user flows and digital solutions – several directly connected to healthcare.', status: 'Status', focus: 'Focus', tech: 'Tech stack', code: 'Code on GitHub', frontend: 'Frontend on GitHub', backend: 'Backend on GitHub', demo: 'Demo' },
         skills: {
             eyebrow: 'Strengths', title: 'Skills for digital healthcare', intro: 'Clinical experience combined with an understanding of how healthcare systems, data and workflows are used in practice.',
             items: ['GCP and clinical research', 'Medication management', 'Clinical assessments', 'Patient safety', 'Medical patient communication', 'Vaccination and prevention', 'Structured documentation', 'Cross-functional collaboration'],
@@ -252,7 +252,7 @@ const messages: Record<Locale, Messages> = {
             ],
             rolesTitle: 'Κατάλληλοι ρόλοι', roles: ['Clinical trials', 'HealthTech', 'Product Specialist', 'Implementation', 'Customer Success'],
         },
-        projects: { eyebrow: 'Projects', title: 'Projects όπου η υγεία και η τεχνολογία συναντιούνται', intro: 'Επιλεγμένα projects με συστήματα, user flows και ψηφιακές λύσεις.', viewTechnology: 'Explore technology', status: 'Status', focus: 'Focus', tech: 'Tech stack' },
+        projects: { eyebrow: 'Έργα', title: 'Έργα όπου η υγεία συναντά την τεχνολογία', intro: 'Επιλεγμένα έργα που δείχνουν πώς δουλεύω με συστήματα, ροές χρηστών και ψηφιακές λύσεις – αρκετά με άμεση σύνδεση με την υγεία.', status: 'Κατάσταση', focus: 'Εστίαση', tech: 'Τεχνολογίες', code: 'Κώδικας στο GitHub', frontend: 'Frontend στο GitHub', backend: 'Backend στο GitHub', demo: 'Demo' },
         skills: {
             eyebrow: 'Δυνατά σημεία', title: 'Σχετικές δεξιότητες για τη φαρμακοβιομηχανία', intro: 'Κλινική εμπειρία οργανωμένη για φαρμακευτικούς ρόλους με έμφαση στη συμβουλευτική επικοινωνία, την ασφάλεια ασθενών και τις σχέσεις.',
             items: ['GCP και κλινική έρευνα', 'Διαχείριση φαρμάκων', 'Κλινική αξιολόγηση', 'Ασφάλεια ασθενών', 'Ιατρική επικοινωνία με ασθενείς', 'Εμβολιασμός και πρόληψη', 'Δομημένη τεκμηρίωση', 'Διεπιστημονική συνεργασία'],
