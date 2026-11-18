@@ -3,6 +3,18 @@ import { CvEntryData } from '@/types';
 
 // Lista din arbetslivserfarenhet här, den senaste först.
 export const workExperience: CvEntryData[] = [
+    // TODO: Period för LIA hos Mabel AI saknas. Fråga också om kundnamnet (Johnson & Johnson Grekland) får nämnas.
+    {
+        title: 'LIA, systemutveckling',
+        location: 'Mabel AI – AI-baserad klinisk transkribering för vården',
+        period: '',
+        tags: ['JavaScript', 'TypeScript'],
+        description: [
+            'Bygger tillsammans med teamet en mallmotor som gör om transkriberade ronder i slutenvården till journalutkast.',
+            'Ny summary-endpoint i journal-backend, där mallen skickas med i requesten.',
+            'Granskade och testade grekisk medicinsk terminologi i verktyget inför ett kundprojekt i Grekland.',
+        ],
+    },
     {
         title: 'Distriktssköterska',
         location: 'Capio Go och Meliva vårdcentral Masthuggskajen',
@@ -82,6 +94,13 @@ export const workExperience: CvEntryData[] = [
 
 // Lista din utbildning här, den senaste först.
 export const education: CvEntryData[] = [
+    // TODO: Exakt period för utbildningen saknas, och om LIA ingår.
+    {
+        title: 'Systemutvecklare .NET',
+        location: 'NBI Handelsakademin, Göteborg',
+        period: 'Examen 2026',
+        description: [],
+    },
     {
         title: 'Specialistsjuksköterskeprogrammet, distriktssköterska, 75 hp',
         location: 'Karlstads universitet',
