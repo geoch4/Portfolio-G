@@ -4,56 +4,71 @@ import { CvEntryData } from '@/types';
 // Lista din arbetslivserfarenhet här, den senaste först.
 export const workExperience: CvEntryData[] = [
     {
-        title: 'Distriktsköterska i ECT & rTMS mottagning',
-        location: 'Sahlgrenska Universitessjukhus, Göteborg',
-        period: 'Januari 2025 - Nuvarande',
+        title: 'Distriktssköterska',
+        location: 'Capio Go och Meliva vårdcentral Masthuggskajen (konsultuppdrag)',
+        period: '2026',
         description: [
-            'På ECT & rTMS-mottagningen vid Sahlgrenska arbetar jag som distriktssköterska med ansvar för förberedelse, genomförande och uppföljning av ECT- och rTMS-behandlingar.',
-            'Jag ansvarar för kliniska patientbedömningar, läkemedelshantering, dokumentation och säker vård i nära samarbete med psykiater och anestesipersonal.',
-            'Rollen har stärkt min förmåga att följa behandlingsprotokoll, uppmärksamma kliniska förändringar och kommunicera tydligt med patienter och tvärprofessionella team.',
-        ],
-    },
-    // TODO: Dubbelkolla de överlappande perioderna mars 2022–januari 2025,
-    // april 2019–september 2022 och maj 2021–mars 2022. Förtydliga vilka roller
-    // som eventuellt pågick parallellt eller var deltidsroller.
-    {
-        title: 'Vaccinationsansvarig sjuksköterska',
-        location: 'Min Doktor International, Västra Götaland',
-        period: 'Mars 2022-Januari 2025',
-        description: [
-            'Som klinik- och vaccinationsansvarig sjuksköterska ansvarade jag för daglig drift, medicinsk rådgivning, vaccinationer, kvalitetssäkra arbetssätt och introduktion av nya kollegor.',
-            'Jag samarbetade med läkemedelsföretag och deltog i det regionala HPV-projektet, där jag utvecklade patientfokuserade arbetsflöden för att öka vaccinationstäckningen.',
-            'Jag bidrog även med målgruppsanpassad patientkommunikation och verksamhetsutveckling, vilket gav erfarenhet av att förmedla medicinsk information tydligt och omsätta riktlinjer i praktiskt arbete.',
+            'Bedömning, triage och egenvårdsråd på mottagning, i telefon och via chatt och video.',
+            'Vaccinationer, hälsokontroller och hänvisning till rätt vårdnivå.',
         ],
     },
     {
-        title: 'Samordnande forskningssköterska',
-        location: 'Nordhemskliniken, Göteborg',
-        period: 'Maj 2021-Mars 2022',
+        title: 'Distriktssköterska',
+        location: 'ECT- och rTMS-mottagningen, Sahlgrenska Universitetssjukhuset',
+        period: 'Januari 2025 - Januari 2026',
         description: [
-            'Som forskningssköterska i NordAlc-projektet medverkade jag i klinisk forskning om alkoholavgiftning inom Beroendemedicin.',
-            'Arbetet omfattade patientnära forskningsarbete, strukturerad dokumentation, läkemedelshantering och tvärprofessionell samverkan i specialistvård.',
-            'Erfarenheten gav mig förståelse för kvalitet, patientsäkerhet och följsamhet till strukturerade arbetssätt i kliniska studier.',
+            'Samordnade behandlingar mellan remitterande psykiatriska enheter, läkare och mottagningen.',
+            'Såg hur remisserna fastnade mellan två IT-system. Tog initiativ till ett koncept för en digital remiss- och prioriteringslösning, och drev införandet av taligenkänning.',
         ],
     },
     {
-        title: 'Legitimerad sjuksköterska inom Psykiatrin',
-        location: 'Sahlgrenska Universitessjukhus, Göteborg',
-        period: 'April 2019-September 2022',
+        title: 'Klinikansvarig vaccinationssjuksköterska',
+        location: 'Min Doktor',
+        period: 'Mars 2022 - Januari 2025',
         description: [
-            'På Sahlgrenska Universitetssjukhuset arbetade jag inom både beroendevård och allmän psykiatri, med fokus på akuta medicinska bedömningar, abstinensbehandling, läkemedelshantering och suicidriskbedömning.',
-            'Jag samarbetade tvärprofessionellt med läkare, psykologer och socialtjänst för att skapa individanpassade vårdplaner, och använde motiverande samtal (MI) som en del av patientstödet.',
-            'Denna erfarenhet har gett mig en djup förståelse för specialistläkemedel, krishantering och helhetsinriktad vård.',
+            'Ansvarig för mottagningens drift, försäljning och planering.',
+            'Arbetade på Min Doktors mottagningar i hela VGR och samarbetade med Apotek Hjärtat på varje ort.',
+            'Byggde arbetsflöden som kortade väntetiderna och utbildade personalen.',
+            'Planerade och genomförde aktiviteter för att öka vaccinationstäckningen inom HPV-projektet i VGR.',
         ],
     },
     {
         title: 'Legitimerad sjuksköterska',
-        location: 'Euromedica klinik, Larisa, Grekland',
-        period: 'Maj 2015 December 2016',
+        location: 'Vacant Vårdbemanning',
+        period: '2022 - 2023 · Extrauppdrag, timanställning',
         description: [
-            'På Arogi Euromedica-kliniken arbetade jag inom avancerad äldrevård, ortopedi, strokevård och rehabilitering.',
-            'Jag ansvarade för medicinsk omvårdnad, sårvård, läkemedelshantering.',
-            'Samarbetade med fysioterapeuter, arbetsterapeuter och läkare för att utforma individanpassade rehabiliteringsplaner med fokus på funktionell återhämtning, delaktighet och självständighet i vardagen.',
+            'Uppdrag inom hemsjukvård och äldreboende, bland annat i Halland och i Norge.',
+        ],
+    },
+    {
+        title: 'Sjuksköterska och samordnande forskningssjuksköterska',
+        location: 'Beroendemedicin, Sahlgrenska Universitetssjukhuset',
+        period: 'Mars 2021 - Mars 2022 · Delad tjänst, klinik och forskning',
+        description: [
+            'Klinik: abstinensbehandling, läkemedelshantering och omvårdnad vid alkoholavgiftning.',
+            'Forskning: del av forskarteamet i NordAlc-projektet om alkoholavgiftning.',
+            'Patientinklusion, informerat samtycke och datainsamling enligt GCP, nära huvudprövare och forskarteam.',
+            'Samordnade registerdata mellan klinik och forskningsenhet.',
+        ],
+    },
+    {
+        title: 'Sjuksköterska',
+        location: 'Psykiatri och beroendevård, Sahlgrenska Universitetssjukhuset',
+        period: 'Juni 2017 - Februari 2022',
+        description: [
+            'Allmänpsykiatri och akut beroendevård för unga vuxna och vuxna.',
+            'Läkemedelshantering inom CNS-området och akuta medicinska bedömningar.',
+            'Arbetsledande ansvar i team med läkare, psykologer, socialtjänst och behandlingshem.',
+            'Språkombud för utlandsutbildade läkare och sjuksköterskor.',
+        ],
+    },
+    {
+        title: 'Legitimerad sjuksköterska',
+        location: 'Euromedica Arogi, Larisa, Grekland',
+        period: 'Maj 2014 - December 2016',
+        description: [
+            'Ortopedi, stroke- och rehabiliteringsvård, med läkemedelshantering.',
+            'Rehabiliteringsplaner tillsammans med fysioterapeuter, arbetsterapeuter och läkare.',
         ],
     },
 ];
@@ -61,8 +76,8 @@ export const workExperience: CvEntryData[] = [
 // Lista din utbildning här, den senaste först.
 export const education: CvEntryData[] = [
     {
-        title: 'Specialistsjuksköterskeexamen – distriktssköterska, 75 hp',
-        location: 'Karlstads Universitet',
+        title: 'Magisterexamen 75hp',
+        location: 'Karlstads Universitet, Karlstad',
         period: 'Augusti 2023- Januari 2025',
         description: [
             'Genomförde distriktsköterskeutbildning med inriktning mot folkhälsa vid Karlstads universitet och fokus på hälsofrämjande och förebyggande vårdinsatser.',
@@ -73,7 +88,7 @@ export const education: CvEntryData[] = [
     },
     {
         title: 'Masterexamen i Arbetsfysiologi, träning och rehabilitering, 120hp',
-        location: 'Medicinska Skolan',
+        location: 'Medicinska Skolan, Larisa, Grekland',
         period: 'Januari 2014-Januari 2016',
         description: [
             'Två-årig masterexamen med inriktning på fysisk aktivitet, rehabilitering och arbetsfysiologi, med fokus på kliniska tester, spirometrier, konditionstester, behandling av kroniska sjukdomar och rehabilitering.',
@@ -82,7 +97,7 @@ export const education: CvEntryData[] = [
     },
     {
         title: 'Cerifikat, University of Thessaly, Larisa, Greece',
-        location: 'Tekniska utbildningsinstitutet (TEI)',
+        location: 'Tekniska utbildningsinstitutet (TEI) i Thessalien',
         period: 'December 2013 - Maj 2014',
         description: [
             'Genomförde en 400-timmars utbildning i psykisk hälsa och specialpedagogik vid Tekniska utbildningsinstitutet (TEI) i Thessalien.',
@@ -91,7 +106,7 @@ export const education: CvEntryData[] = [
     },
     {
         title: 'Sjuksköterskeexamen, 240 hp',
-        location: 'Teknologiska Universitet',
+        location: 'Teknologiska Universitet, Limassol, Cyprus',
         period: 'September 2009 - Juni 2013',
         description: [
             'Jag har en sjuksköterskeexamen från Teknologiska Universitetet i Cypern (TEPAK), där jag kombinerade teoretiska studier med omfattande praktik inom akutvård, medicin, kirurgi, psykiatri och primärvård.',
@@ -102,26 +117,24 @@ export const education: CvEntryData[] = [
 
 // Denna ska ligga härefter, utanför den andra listan.
 export const skills: string[] = [
-    'GCP och klinisk forskning',
-    'Läkemedelshantering',
-    'Kliniska bedömningar',
-    'Patientsäkerhet',
-    'Medicinsk patientkommunikation',
-    'Vaccination och prevention',
-    'Strukturerad dokumentation',
-    'Tvärprofessionellt samarbete',
+    'Affärsmässigt och konsultativt förhållningssätt',
+    'Självständig och flexibel',
+    'God lagspelare och samarbetsinriktad',
+    'Goda IT-kunskaper',
+    'GCP-utbildning',
+    'Strukturerad och planerad',
 ];
 
 export const coursesAndCertifications: string[] = [
-    'GCP-utbildning för framtida forskare',
-    'Digitalisering i vården - utmaningar och möjligheter, Göteborgs Universitet 7,5hp',
-    'Hållbar organisering och styrning inom vård och omsorg, Göteborgs Universitet 7,5hp',
     'Strategier för personalutveckling, Göteborgs Universitet 15hp',
-    'Omvårdnadsvetenskap, Handledning och bedömning i verksamhetsförlagd utbildning, Örebro Universitet',
-    'Handledareutbildning, Göteborgs Universitet, 7,5 hp',
-    'MI-samtal Återfallsprevention/känsloreglering/DBT',
     'Fysisk aktivitet och hälsa för KRAFT-instruktörer, 7,5 hp',
     'Fysisk aktivitet och hälsa för KRAFT-strateger, 7,5 hp',
+    'Digitalisering i vården - utmaningar och möjligheter, Göteborgs Universitet 7,5hp',
+    'Hållbar organisering och styrning inom vård och omsorg, Göteborgs Universitet 7,5hp',
+    'Omvårdnadsvetenskap, Handledning och bedömning i verksamhetsförlagd utbildning, Örebro Universitet',
+    'MI-samtal Återfallsprevention/känsloreglering/DBT',
     'Systematisk arbetsmiljöarbete Miljöarbete',
-    'Certifikat i psykisk hälsa och specialpedagogik, 400 timmar'
+    'Handledareutbildning, Göteborgs Universitet, 7,5 hp',
+    'GCP-utbildning för framtida forskare',
+    'Cerifikat i psykisk hälsa och specialpedagogik, 400 timmar'
 ];

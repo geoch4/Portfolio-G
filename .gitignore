@@ -48,3 +48,6 @@ next-env.d.ts
 /.dev-server*.log
 /tmp/
 /output/
+
+# IDE
+/.idea/
