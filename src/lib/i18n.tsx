@@ -24,7 +24,7 @@ type Messages = {
     skills: {
         eyebrow: string; title: string; intro: string; items: string[];
         groups?: { title: string; items: string[] }[];
-        practical: string; languages: string; languagesValue: string; driving: string; yes: string;
+        practical: string; languages: string; languagesValue: string; driving: string; yes: string; licences: string; licencesValue: string;
         availability: string; availabilityValue: string; references: string; referencesValue: string;
         digitalEyebrow: string; digitalTitle: string; digitalBody: string; digitalItems: string[];
     };
@@ -120,11 +120,12 @@ const messages: Record<Locale, Messages> = {
                 { title: 'Digital vårdförståelse', items: ['Strukturerad dokumentation', 'Datakvalitet', 'Digitala vårdflöden'] },
                 { title: 'Samverkan & kommunikation', items: ['Medicinsk patientkommunikation', 'Tvärprofessionellt samarbete', 'Introduktion av kollegor'] },
             ],
-            practical: 'Praktisk information', languages: 'Språk', languagesValue: 'Svenska, engelska, grekiska och tyska (B2)', driving: 'Körkort', yes: 'Ja',
+            practical: 'Praktisk information', languages: 'Språk', languagesValue: 'Grekiska (modersmål), svenska (flytande), engelska (flytande), tyska (goda, B2)', driving: 'Körkort', yes: 'B-körkort',
+            licences: 'Legitimationer', licencesValue: 'Legitimerad sjuksköterska (Socialstyrelsen), specialistsjuksköterska – distriktssköterska, förskrivningsrätt, GCP-certifierad, LIF-certifierad',
             availability: 'Tillgänglighet', availabilityValue: 'Enligt överenskommelse', references: 'Referenser', referencesValue: 'Lämnas på begäran',
             digitalEyebrow: 'Digital kompetens', digitalTitle: 'Systemförståelse i vården',
             digitalBody: 'Min kliniska bakgrund gör att jag förstår hur vårdens digitala system påverkar det dagliga arbetet: dokumentation, prioritering, uppföljning och kommunikation mellan aktörer. Tillsammans med mina IT-studier ger det mig en brygga mellan vårdens verklighet och de team som bygger systemen.',
-            digitalItems: ['Vårdflöden', 'Datakvalitet', 'Patientnära digitalisering'],
+            digitalItems: ['Journalsystem och digitala vårdplattformar', 'Dataanalys och uppföljning', 'Vårdflöden', 'Datakvalitet', 'Patientnära digitalisering'],
         },
         work: { eyebrow: 'Karriär', title: 'Arbetslivserfarenhet', fullCv: 'Se hela mitt CV' },
         education: { eyebrow: 'Bakgrund', title: 'Utbildning' },
@@ -193,11 +194,12 @@ const messages: Record<Locale, Messages> = {
                 { title: 'Digital care insight', items: ['Structured documentation', 'Data quality', 'Digital care pathways'] },
                 { title: 'Collaboration & communication', items: ['Medical patient communication', 'Cross-functional collaboration', 'Onboarding colleagues'] },
             ],
-            practical: 'Practical information', languages: 'Languages', languagesValue: 'Swedish, English, Greek and German (B2)', driving: 'Driving licence', yes: 'Yes',
+            practical: 'Practical information', languages: 'Languages', languagesValue: 'Greek (native), Swedish (fluent), English (fluent), German (good, B2)', driving: 'Driving licence', yes: 'Category B',
+            licences: 'Licences & certifications', licencesValue: 'Registered nurse (National Board of Health and Welfare, Sweden), specialist nurse – district nursing, prescribing rights, GCP certified, LIF certified',
             availability: 'Availability', availabilityValue: 'By agreement', references: 'References', referencesValue: 'Available upon request',
             digitalEyebrow: 'Digital competence', digitalTitle: 'Understanding healthcare systems',
             digitalBody: 'My clinical background helps me understand how digital healthcare systems affect daily work: documentation, prioritisation, follow-up and communication between stakeholders. Together with my IT studies, this gives me a bridge between real healthcare practice and the teams that build the systems.',
-            digitalItems: ['Care pathways', 'Data quality', 'Patient-centred digitalisation'],
+            digitalItems: ['Electronic health records and digital care platforms', 'Data analysis and follow-up', 'Care pathways', 'Data quality', 'Patient-centred digitalisation'],
         },
         work: { eyebrow: 'Career', title: 'Work experience', fullCv: 'View my full CV' },
         education: { eyebrow: 'Background', title: 'Education' },
@@ -259,11 +261,12 @@ const messages: Record<Locale, Messages> = {
                 { title: 'Επικοινωνία & σχέσεις', items: ['Ιατρική επικοινωνία με ασθενείς', 'Διεπιστημονική συνεργασία', 'Συμβουλευτική προσέγγιση'] },
                 { title: 'Κλινική ασφάλεια', items: ['Κλινική αξιολόγηση', 'Ασφάλεια ασθενών', 'Δομημένη τεκμηρίωση'] },
             ],
-            practical: 'Πρακτικές πληροφορίες', languages: 'Γλώσσες', languagesValue: 'Σουηδικά, αγγλικά, ελληνικά και γερμανικά (B2)', driving: 'Άδεια οδήγησης', yes: 'Ναι',
+            practical: 'Πρακτικές πληροφορίες', languages: 'Γλώσσες', languagesValue: 'Ελληνικά (μητρική), σουηδικά (άριστα), αγγλικά (άριστα), γερμανικά (καλά, B2)', driving: 'Άδεια οδήγησης', yes: 'Κατηγορίας Β',
+            licences: 'Άδειες και πιστοποιήσεις', licencesValue: 'Άδεια άσκησης επαγγέλματος νοσηλεύτριας (Socialstyrelsen, Σουηδία), ειδικευμένη νοσηλεύτρια κοινοτικής υγείας, δικαίωμα συνταγογράφησης, πιστοποίηση GCP, πιστοποίηση LIF',
             availability: 'Διαθεσιμότητα', availabilityValue: 'Κατόπιν συμφωνίας', references: 'Συστάσεις', referencesValue: 'Διαθέσιμες κατόπιν αιτήματος',
             digitalEyebrow: 'Ψηφιακή επάρκεια', digitalTitle: 'Κατανόηση συστημάτων υγείας',
             digitalBody: 'Παράλληλα με το κλινικό μου υπόβαθρο σπουδάζω ανάπτυξη συστημάτων και δημιουργώ ψηφιακές λύσεις συντονισμού φροντίδας. Έτσι κατανοώ τη δομημένη τεκμηρίωση, την ποιότητα δεδομένων και την επίδραση των ψηφιακών ροών στην ασφάλεια και την παρακολούθηση.',
-            digitalItems: ['Κλινική τεκμηρίωση', 'Ποιότητα δεδομένων', 'Ψηφιακές ροές φροντίδας'],
+            digitalItems: ['Ηλεκτρονικοί φάκελοι υγείας και ψηφιακές πλατφόρμες φροντίδας', 'Ανάλυση δεδομένων και παρακολούθηση', 'Κλινική τεκμηρίωση', 'Ποιότητα δεδομένων', 'Ψηφιακές ροές φροντίδας'],
         },
         work: { eyebrow: 'Σταδιοδρομία', title: 'Επαγγελματική εμπειρία', fullCv: 'Δείτε ολόκληρο το βιογραφικό' },
         education: { eyebrow: 'Υπόβαθρο', title: 'Εκπαίδευση' },

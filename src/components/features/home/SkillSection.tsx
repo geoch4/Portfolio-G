@@ -44,6 +44,7 @@ const SkillsSection = () => {
                             <p><span className="font-semibold text-white">{t.skills.driving}:</span> {t.skills.yes}</p>
                             <p><span className="font-semibold text-white">{t.skills.availability}:</span> {t.skills.availabilityValue}</p>
                             <p><span className="font-semibold text-white">{t.skills.references}:</span> {t.skills.referencesValue}</p>
+                            <p className="sm:col-span-2"><span className="font-semibold text-white">{t.skills.licences}:</span> {t.skills.licencesValue}</p>
                         </div>
                     </div>
                 </div>

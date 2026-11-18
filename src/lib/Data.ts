@@ -5,8 +5,8 @@ import { CvEntryData } from '@/types';
 export const workExperience: CvEntryData[] = [
     {
         title: 'Distriktssköterska',
-        location: 'Capio Go och Meliva vårdcentral Masthuggskajen (konsultuppdrag)',
-        period: '2026',
+        location: 'Capio Go och Meliva vårdcentral Masthuggskajen',
+        period: 'Januari 2026 - 2026 · Avslutade uppdrag',
         description: [
             'Bedömning, triage och egenvårdsråd på mottagning, i telefon och via chatt och video.',
             'Vaccinationer, hälsokontroller och hänvisning till rätt vårdnivå.',
@@ -76,42 +76,32 @@ export const workExperience: CvEntryData[] = [
 // Lista din utbildning här, den senaste först.
 export const education: CvEntryData[] = [
     {
-        title: 'Magisterexamen 75hp',
-        location: 'Karlstads Universitet, Karlstad',
-        period: 'Augusti 2023- Januari 2025',
+        title: 'Specialistsjuksköterskeprogrammet, distriktssköterska, 75 hp',
+        location: 'Karlstads universitet',
+        period: 'Augusti 2023 - Oktober 2024',
         description: [
-            'Genomförde distriktsköterskeutbildning med inriktning mot folkhälsa vid Karlstads universitet och fokus på hälsofrämjande och förebyggande vårdinsatser.',
-            'Fick bred erfarenhet inom barnhälsovård, elevhälsa, primärvård och hemsjukvård samt utbildning i ledarskap och förskrivningsrätt.',
-            'Examensarbetet fokuserade på digitala vårdtjänster för äldre, vilket stärkte min kompetens inom digitalisering, telefonrådgivning, motiverande samtal och triagering.',
-            'Praktik inom BVC, skolor, vårdcentral och avancerad hemsjukvård ingick.',
+            'Hälsofrämjande arbete, digital vård och triage, ledarskap, förskrivningsrätt.',
         ],
     },
     {
-        title: 'Masterexamen i Arbetsfysiologi, träning och rehabilitering, 120hp',
-        location: 'Medicinska Skolan, Larisa, Grekland',
-        period: 'Januari 2014-Januari 2016',
+        title: 'Masterexamen i arbetsfysiologi, träning och rehabilitering, 120 hp',
+        location: 'University of Thessaly',
+        period: 'Januari 2014 - Januari 2016',
         description: [
-            'Två-årig masterexamen med inriktning på fysisk aktivitet, rehabilitering och arbetsfysiologi, med fokus på kliniska tester, spirometrier, konditionstester, behandling av kroniska sjukdomar och rehabilitering.',
-            'Utbildningen gav mig fördjupade kunskaper och strategier i att utforma individanpassade rehabiliteringsplaner samt strategier för hälsofrämjande och förebyggande arbete inom livsstilsförändring, förbättring av livskvalitet, hälsopedagogik/coaching och kostrådgivning- kompetenser som är mycket tillämpbara och direkt kopplade till företagshälsovården.',
+            'Spirometri, ergospirometri och rehabilitering av patienter med KOL.',
         ],
     },
     {
-        title: 'Cerifikat, University of Thessaly, Larisa, Greece',
-        location: 'Tekniska utbildningsinstitutet (TEI) i Thessalien',
+        title: 'Specialisering i psykisk hälsa och specialpedagogik',
+        location: 'TEI of Thessaly',
         period: 'December 2013 - Maj 2014',
-        description: [
-            'Genomförde en 400-timmars utbildning i psykisk hälsa och specialpedagogik vid Tekniska utbildningsinstitutet (TEI) i Thessalien.',
-            'Fick kunskaper inom klassificering av psykiska sjukdomar, ADHD, autism, krishantering, psykosocialt stöd och rehabilitering, med fokus på att stödja utsatta grupper och individer med särskilda behov.',
-        ],
+        description: [],
     },
     {
         title: 'Sjuksköterskeexamen, 240 hp',
-        location: 'Teknologiska Universitet, Limassol, Cyprus',
+        location: 'Cyprus University of Technology',
         period: 'September 2009 - Juni 2013',
-        description: [
-            'Jag har en sjuksköterskeexamen från Teknologiska Universitetet i Cypern (TEPAK), där jag kombinerade teoretiska studier med omfattande praktik inom akutvård, medicin, kirurgi, psykiatri och primärvård.',
-            'Utbildningen gav mig bred erfarenhet av patientvård och utvecklade mina färdigheter i medicinsk bedömning, läkemedelshantering, hälsofrämjande arbete och evidensbaserad vård med patienten i fokus.',
-        ],
+        description: [],
     },
 ];
 
@@ -136,5 +126,4 @@ export const coursesAndCertifications: string[] = [
     'Systematisk arbetsmiljöarbete Miljöarbete',
     'Handledareutbildning, Göteborgs Universitet, 7,5 hp',
     'GCP-utbildning för framtida forskare',
-    'Cerifikat i psykisk hälsa och specialpedagogik, 400 timmar'
 ];
