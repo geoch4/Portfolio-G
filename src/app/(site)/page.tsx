@@ -1,26 +1,21 @@
 // src/app/(site)/page.tsx
 import CtaSection from '@/components/features/home/CtaSection';
 import Hero from '@/components/features/home/Hero';
-import AboutSection from '@/components/features/home/AboutSection';
-import HybridProfileSection from '@/components/features/home/HybridProfileSection';
+import ProfileSection from '@/components/features/home/ProfileSection';
 import ProjectsSection from '@/components/features/home/ProjectsSection';
-import SkillsSection from '@/components/features/home/SkillSection';
 import WorkExperienceSection from '@/components/features/home/WorkExperienceSection';
 import EducationSection from '@/components/features/home/EducationSection';
-import CoursesSection from '@/components/features/home/CourseSection';
 import React from 'react';
 
+// Kompetenser, praktisk information och kurser ligger på /cv.
 const HomePage = () => {
     return (
         <>
             <Hero />
-            <AboutSection />
-            <HybridProfileSection />
-            <ProjectsSection />
             <WorkExperienceSection />
+            <ProjectsSection />
+            <ProfileSection />
             <EducationSection />
-            <SkillsSection />
-            <CoursesSection />
             <CtaSection />
         </>
     );

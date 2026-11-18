@@ -1,12 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { getLocalizedData } from '@/lib/localizedData';
 
 const CvPage = () => {
     const { locale, t } = useI18n();
     const { work, education, courses } = getLocalizedData(locale);
+    const [showAllCourses, setShowAllCourses] = useState(false);
+    const visibleCourses = showAllCourses ? courses : courses.slice(0, 5);
+    const practical = [
+        [t.skills.languages, t.skills.languagesValue],
+        [t.skills.licences, t.skills.licencesValue],
+        [t.skills.driving, t.skills.drivingValue],
+        [t.skills.availability, t.skills.availabilityValue],
+        [t.skills.references, t.skills.referencesValue],
+    ];
     return (
         <div className="bg-[#080b14] py-20 md:py-28">
             <div className="max-w-4xl mx-auto px-6">
@@ -102,13 +111,35 @@ const CvPage = () => {
                     <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white mb-6 pb-2 border-b border-white/10">
                         {t.cv.skills}
                     </h2>
-                    <div className="flex flex-wrap gap-2">
-                        {t.skills.items.map((skill, index) => (
-                            <span key={index} className="rounded-full border border-sky-300/25 bg-sky-300/10 px-4 py-1.5 text-sm font-medium text-sky-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
-                                {skill}
-                            </span>
+                    <div className="space-y-6">
+                        {t.skills.groups.map((group) => (
+                            <div key={group.title}>
+                                <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">{group.title}</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {group.items.map((skill) => (
+                                        <span key={skill} className="rounded-full border border-sky-300/25 bg-sky-300/10 px-4 py-1.5 text-sm font-medium text-sky-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </div>
+                </section>
+
+                {/* Praktisk information */}
+                <section className="mb-14">
+                    <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white mb-6 pb-2 border-b border-white/10">
+                        {t.skills.practical}
+                    </h2>
+                    <dl className="grid grid-cols-1 gap-4 text-sm text-slate-300 sm:grid-cols-[12rem_1fr]">
+                        {practical.map(([label, value]) => (
+                            <React.Fragment key={label}>
+                                <dt className="font-semibold text-white">{label}</dt>
+                                <dd>{value}</dd>
+                            </React.Fragment>
+                        ))}
+                    </dl>
                 </section>
 
                 {/* Kurser */}
@@ -117,13 +148,22 @@ const CvPage = () => {
                         {t.cv.courses}
                     </h2>
                     <ul className="space-y-2">
-                        {courses.map((course, index) => (
-                            <li key={index} className="text-sm text-slate-300 flex gap-2">
+                        {visibleCourses.map((course) => (
+                            <li key={course} className="text-sm text-slate-300 flex gap-2">
                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-300 flex-shrink-0" />
                                 {course}
                             </li>
                         ))}
                     </ul>
+                    {courses.length > 5 && (
+                        <button
+                            type="button"
+                            onClick={() => setShowAllCourses((value) => !value)}
+                            className="mt-6 rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-sky-300/50 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-300/30"
+                        >
+                            {showAllCourses ? t.courses.less : t.courses.all}
+                        </button>
+                    )}
                 </section>
 
             </div>

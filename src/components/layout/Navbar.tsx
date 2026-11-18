@@ -13,10 +13,9 @@ const Navbar = () => {
 
     const sectionLinks = useMemo(() => [
         { id: 'hem', href: '/', label: t.nav.home },
-        { id: 'about', href: '/#about', label: t.nav.about },
-        { id: 'expertise', href: '/#expertise', label: t.nav.expertise },
-        { id: 'projects', href: '/#projects', label: t.nav.projects },
+        { id: 'profil', href: '/#profil', label: t.nav.about },
         { id: 'arbete', href: '/#arbete', label: t.nav.work },
+        { id: 'projects', href: '/#projects', label: t.nav.projects },
         { id: 'utbildning', href: '/#utbildning', label: t.nav.education },
     ], [t.nav]);
 
@@ -106,7 +105,6 @@ const Navbar = () => {
                         >
                             {t.nav.contact}
                         </Link>
-                        {/* TODO: Add separate Software/HealthTech and Life Science/Commercial CV PDFs when the files exist in public/. */}
                         <a
                             href="/cv-georgia-chalkia.pdf"
                             download
@@ -135,7 +133,7 @@ const Navbar = () => {
                         aria-controls="mobile-navigation"
                         onClick={() => setIsOpen((value) => !value)}
                     >
-                        {t.nav.menu}
+                        {isOpen ? t.nav.menuClose : t.nav.menu}
                     </button>
                 </div>
 

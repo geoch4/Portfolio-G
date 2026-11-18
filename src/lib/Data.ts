@@ -141,15 +141,16 @@ export const skills: string[] = [
     'Strukturerad och planerad',
 ];
 
+// De fem första visas direkt på /cv, resten bakom "Visa alla kurser".
 export const coursesAndCertifications: string[] = [
-    'Strategier för personalutveckling, Göteborgs Universitet 15hp',
+    'GCP-utbildning för framtida forskare',
+    'Digitalisering i vården – utmaningar och möjligheter, Göteborgs universitet, 7,5 hp',
+    'Hållbar organisering och styrning inom vård och omsorg, Göteborgs universitet, 7,5 hp',
+    'Handledarutbildning, Göteborgs universitet, 7,5 hp',
+    'MI-samtal: återfallsprevention, känsloreglering och DBT',
+    'Strategier för personalutveckling, Göteborgs universitet, 15 hp',
+    'Omvårdnadsvetenskap: handledning och bedömning i verksamhetsförlagd utbildning, Örebro universitet',
     'Fysisk aktivitet och hälsa för KRAFT-instruktörer, 7,5 hp',
     'Fysisk aktivitet och hälsa för KRAFT-strateger, 7,5 hp',
-    'Digitalisering i vården - utmaningar och möjligheter, Göteborgs Universitet 7,5hp',
-    'Hållbar organisering och styrning inom vård och omsorg, Göteborgs Universitet 7,5hp',
-    'Omvårdnadsvetenskap, Handledning och bedömning i verksamhetsförlagd utbildning, Örebro Universitet',
-    'MI-samtal Återfallsprevention/känsloreglering/DBT',
-    'Systematisk arbetsmiljöarbete Miljöarbete',
-    'Handledareutbildning, Göteborgs Universitet, 7,5 hp',
-    'GCP-utbildning för framtida forskare',
+    'Systematiskt arbetsmiljöarbete',
 ];

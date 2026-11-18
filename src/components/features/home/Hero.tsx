@@ -31,42 +31,29 @@ const Hero = () => {
                         <h1 className="mt-5 max-w-3xl font-[family-name:var(--font-playfair)] text-5xl font-bold leading-[0.98] tracking-tight text-white md:text-7xl">
                             {t.hero.headline}
                         </h1>
-                        {t.hero.positioning && (
-                            <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-sky-100 md:mx-0">
-                                {t.hero.positioning}
-                            </p>
-                        )}
-                        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300 md:mx-0 md:text-lg">
-                            {t.hero.body}
+                        <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-sky-100 md:mx-0">
+                            {t.hero.proof}
                         </p>
+                        <div className="mx-auto mt-6 flex max-w-xl flex-wrap justify-center gap-2 md:mx-0 md:justify-start">
+                            {t.hero.stats.map((stat) => (
+                                <SkillChip key={stat} tone="slate">{stat}</SkillChip>
+                            ))}
+                        </div>
                         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
                             <a
                                 href="#projects"
                                 className="rounded-full bg-sky-300 px-7 py-3 font-semibold text-slate-950 shadow-lg shadow-sky-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-sky-400/30 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200/60"
                             >
-                                {t.hero.cv}
-                            </a>
-                            <a
-                                href="#expertise"
-                                className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-violet-300/60 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-violet-200/40"
-                            >
-                                {t.hero.contact}
+                                {t.hero.projectsButton}
                             </a>
                             <a
                                 href="/cv-georgia-chalkia.pdf"
                                 download
-                                className="rounded-full border border-slate-600 px-7 py-3 font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200/40"
+                                className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-violet-300/60 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-violet-200/40"
                             >
-                                Download CV
+                                {t.hero.cvButton}
                             </a>
                         </div>
-                        {t.hero.highlights && (
-                            <div className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-2 md:mx-0 md:justify-start">
-                                {t.hero.highlights.map((highlight) => (
-                                    <SkillChip key={highlight.title} tone="slate">{highlight.title}</SkillChip>
-                                ))}
-                            </div>
-                        )}
                     </div>
 
                     <div className="flex justify-center">
@@ -83,8 +70,8 @@ const Hero = () => {
                                 />
                                 </div>
                                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-[#080b14]/80 p-4 backdrop-blur">
-                                    <p className="text-sm font-semibold text-white">Healthcare × Technology</p>
-                                    <p className="mt-1 text-xs text-slate-300">Clinical credibility with digital delivery mindset.</p>
+                                    <p className="text-sm font-semibold text-white">{t.hero.cardTitle}</p>
+                                    <p className="mt-1 text-xs text-slate-300">{t.hero.cardBody}</p>
                                 </div>
                             </div>
                         </div>

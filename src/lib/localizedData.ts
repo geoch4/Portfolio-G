@@ -28,7 +28,7 @@ const english: LocalizedData = {
         { title: 'Specialisation in Mental Health and Special Education', location: 'TEI of Thessaly', period: 'December 2013 - May 2014', description: [] },
         { title: 'Nursing degree, 240 credits', location: 'Cyprus University of Technology', period: 'September 2009 - June 2013', description: [] },
     ],
-    courses: ['GCP training for future researchers', 'Digitalisation in healthcare - challenges and opportunities, 7.5 credits', 'Sustainable organisation and governance in health and social care, 7.5 credits', 'Strategies for staff development, 15 credits', 'Clinical supervision and assessment in workplace learning', 'Supervisor training, 7.5 credits', 'Motivational interviewing, relapse prevention, emotional regulation and DBT', 'Physical activity and health for KRAFT instructors, 7.5 credits', 'Physical activity and health for KRAFT strategists, 7.5 credits', 'Systematic work environment management'],
+    courses: ['GCP training for future researchers', 'Digitalisation in healthcare – challenges and opportunities, University of Gothenburg, 7.5 credits', 'Sustainable organisation and governance in health and social care, University of Gothenburg, 7.5 credits', 'Supervisor training, University of Gothenburg, 7.5 credits', 'Motivational interviewing: relapse prevention, emotional regulation and DBT', 'Strategies for staff development, University of Gothenburg, 15 credits', 'Nursing science: clinical supervision and assessment in workplace-based education, Örebro University', 'Physical activity and health for KRAFT instructors, 7.5 credits', 'Physical activity and health for KRAFT strategists, 7.5 credits', 'Systematic work environment management'],
 };
 
 const greek: LocalizedData = {
@@ -51,7 +51,7 @@ const greek: LocalizedData = {
         { title: 'Ειδίκευση στην ψυχική υγεία και την ειδική αγωγή', location: 'ΤΕΙ Θεσσαλίας', period: 'Δεκέμβριος 2013 - Μάιος 2014', description: [] },
         { title: 'Πτυχίο Νοσηλευτικής, 240 ECTS', location: 'Τεχνολογικό Πανεπιστήμιο Κύπρου', period: 'Σεπτέμβριος 2009 - Ιούνιος 2013', description: [] },
     ],
-    courses: ['Εκπαίδευση GCP για μελλοντικούς ερευνητές', 'Ψηφιοποίηση στην υγεία, 7,5 ECTS', 'Βιώσιμη οργάνωση και διοίκηση στην υγεία, 7,5 ECTS', 'Στρατηγικές ανάπτυξης προσωπικού, 15 ECTS', 'Κλινική επίβλεψη και αξιολόγηση', 'Εκπαίδευση επόπτη, 7,5 ECTS', 'Παρακινητική συνέντευξη, πρόληψη υποτροπής και DBT', 'Φυσική δραστηριότητα και υγεία, 7,5 ECTS', 'Στρατηγική φυσικής δραστηριότητας, 7,5 ECTS', 'Συστηματική διαχείριση εργασιακού περιβάλλοντος'],
+    courses: ['Εκπαίδευση GCP για μελλοντικούς ερευνητές', 'Ψηφιοποίηση στην υγεία – προκλήσεις και ευκαιρίες, Πανεπιστήμιο του Γκέτεμποργκ, 7,5 ECTS', 'Βιώσιμη οργάνωση και διοίκηση στην υγεία και την κοινωνική φροντίδα, Πανεπιστήμιο του Γκέτεμποργκ, 7,5 ECTS', 'Εκπαίδευση εποπτών, Πανεπιστήμιο του Γκέτεμποργκ, 7,5 ECTS', 'Παρακινητική συνέντευξη: πρόληψη υποτροπής, ρύθμιση συναισθημάτων και DBT', 'Στρατηγικές ανάπτυξης προσωπικού, Πανεπιστήμιο του Γκέτεμποργκ, 15 ECTS', 'Νοσηλευτική επιστήμη: κλινική εποπτεία και αξιολόγηση στην πρακτική άσκηση, Πανεπιστήμιο Örebro', 'Φυσική δραστηριότητα και υγεία για εκπαιδευτές KRAFT, 7,5 ECTS', 'Φυσική δραστηριότητα και υγεία για στρατηγικούς σχεδιαστές KRAFT, 7,5 ECTS', 'Συστηματική διαχείριση εργασιακού περιβάλλοντος'],
 };
 
 export const getLocalizedData = (locale: Locale): LocalizedData => {
