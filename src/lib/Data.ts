@@ -5,8 +5,8 @@ import { CvEntryData } from '@/types';
 export const workExperience: CvEntryData[] = [
     {
         title: 'Distriktssköterska',
-        location: 'Capio Go (pågående) och Meliva vårdcentral Masthuggskajen (konsultuppdrag, avslutat)',
-        period: 'Januari 2026 - Pågående',
+        location: 'Capio Go och Meliva vårdcentral Masthuggskajen (konsultuppdrag)',
+        period: '2026',
         description: [
             'Bedömning, triage och egenvårdsråd på mottagning, i telefon och via chatt och video.',
             'Vaccinationer, hälsokontroller och hänvisning till rätt vårdnivå.',
