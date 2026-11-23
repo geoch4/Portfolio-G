@@ -2,7 +2,8 @@
  * Single source of content. Every string here comes from Georgia's developer CV
  * (CV_Georgia_Developer_EN, translated faithfully into Swedish). The extra courses
  * under CERTIFICATIONS come from her Swedish CV (CV Georgia Chalkia, section
- * "Kompetensutveckling och kurser"). Years are only shown where the CV states them.
+ * "Kompetensutveckling och kurser"). Years and school names that the developer CV left as
+ * placeholders are filled in from the Swedish CV (approved by Georgia, Nov 2026).
  * Components only read from this file.
  */
 
@@ -39,6 +40,7 @@ export const PROFILE = {
     { name: "Tyska", level: "B2" },
   ],
   graduation: "2026",
+  city: "Göteborg",
   currentRole: "Grundare, GMed Consulting AB",
   education: ".NET-systemutveckling, NBI-Handelsakademin (examen 2026)",
   /** ID-card back: "What I am" — every line from the CV. */
@@ -57,6 +59,7 @@ export const NAV: NavItem[] = [
   { id: "kompetenser", label: "Kompetenser" },
   { id: "projekt", label: "Projekt" },
   { id: "erfarenhet", label: "Erfarenhet" },
+  { id: "meriter", label: "Meriter" },
   { id: "kontakt", label: "Kontakt" },
 ];
 
@@ -67,7 +70,8 @@ export const SECTIONS = {
   projekt: { index: "03", label: "Utvalda projekt" },
   certifieringar: { index: "04", label: "Certifieringar & kurser" },
   erfarenhet: { index: "05", label: "Erfarenhet & utbildning" },
-  kontakt: { index: "06", label: "Kontakt" },
+  meriter: { index: "06", label: "Meriter" },
+  kontakt: { index: "07", label: "Kontakt" },
 } as const;
 
 export type Skill = {
@@ -288,24 +292,27 @@ export type TimelineStop = {
   bullets?: string[];
 };
 
-/** Combined path. CV years are placeholders, so only stated ones are shown. */
+/** Combined path, oldest → newest. Years from the Swedish CV; GMed's start year is not stated. */
 export const EDUCATION: TimelineStop[] = [
   {
     kind: "Utbildning",
+    when: "2009 – 2013",
     title: "Sjuksköterskeexamen (BSc)",
-    place: "Cypern",
+    place: "Teknologiska Universitet, Cypern",
     detail: "Svensk sjuksköterskelegitimation utfärdad av Socialstyrelsen.",
   },
   {
     kind: "Utbildning",
     title: "MSc – Ergospirometri, träning och rehabilitering",
-    place: "Grekland",
+    when: "2014 – 2016",
+    place: "Medicinska Skolan, Grekland",
     detail: "Masterexamen.",
   },
   {
     kind: "Utbildning",
     title: "Specialistsjuksköterska – distriktsvård",
-    place: "Sverige",
+    when: "2023 – 2025",
+    place: "Karlstads universitet",
     detail: "Specialistsjuksköterskeexamen med inriktning distriktsvård.",
   },
   {
@@ -321,12 +328,14 @@ export const EDUCATION: TimelineStop[] = [
 export const EXPERIENCE: TimelineStop[] = [
   {
     kind: "Erfarenhet",
+    when: "2019 – 2022",
     title: "Legitimerad sjuksköterska",
     place: "Psykiatri & beroendevård",
     detail: "Allmänpsykiatrisk slutenvård och beroendevård. Handledning av kollegor och sjuksköterskestudenter.",
   },
   {
     kind: "Erfarenhet",
+    when: "2021 – 2022",
     title: "Forskningssjuksköterska (GCP)",
     place: "Klinisk forskning",
     detail:
@@ -334,6 +343,7 @@ export const EXPERIENCE: TimelineStop[] = [
   },
   {
     kind: "Erfarenhet",
+    when: "2022 – 2025",
     title: "Distriktssköterska",
     place: "Min Doktor / digital vård",
     detail:
@@ -341,6 +351,7 @@ export const EXPERIENCE: TimelineStop[] = [
   },
   {
     kind: "Erfarenhet",
+    when: "2025 – nu",
     title: "Sjuksköterska, ECT & neuromodulering",
     place: "Sahlgrenska Universitetssjukhuset",
     detail:
@@ -388,5 +399,37 @@ export const CERTIFICATIONS: Certification[] = [
   { title: "Omvårdnadsvetenskap, handledning och bedömning i verksamhetsförlagd utbildning", issuer: "Kurs" },
 ];
 
-/** The CV states no numbers, ranks or honours, so the Achievements section is omitted. */
-export const ACHIEVEMENTS: { label: string; value: number; caption: string; detail: string; logo: LogoKey }[] = [];
+export type Achievement = {
+  value: number;
+  suffix?: string;
+  label: string;
+  caption: string;
+  detail: string;
+  logo: LogoKey;
+};
+
+/** Only figures stated in the CVs: "12+ years", four languages, nine certifications/courses. */
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    value: 12,
+    suffix: "+",
+    label: "År i vården",
+    caption: "Legitimerad sjuksköterska och specialistsjuksköterska i distriktsvård.",
+    detail: "Psykiatri · beroendevård · digital triage · ECT/rTMS",
+    logo: "care",
+  },
+  {
+    value: 4,
+    label: "Språk",
+    caption: "Grekiska, svenska, engelska och tyska.",
+    detail: "Grekiska modersmål · tyska B2",
+    logo: "speech",
+  },
+  {
+    value: CERTIFICATIONS.length,
+    label: "Certifieringar & kurser",
+    caption: "Bland annat GCP och Digitalisering i vården.",
+    detail: "Legitimation från Socialstyrelsen",
+    logo: "check",
+  },
+];

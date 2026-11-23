@@ -5,6 +5,7 @@ import Skills from "./sections/Skills";
 import Work from "./sections/Work";
 import Certifications from "./sections/Certifications";
 import Experience from "./sections/Experience";
+import Achievements from "./sections/Achievements";
 import Contact, { Footer } from "./sections/Contact";
 import RevealObserver from "./ui/RevealObserver";
 import { SmoothScroll } from "@/lib/scroll";
@@ -21,6 +22,7 @@ export default function App() {
         <Work />
         <Certifications />
         <Experience />
+        <Achievements />
         <Contact />
       </main>
       <Footer />

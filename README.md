@@ -19,10 +19,11 @@ All text lives in **`src/lib/data.ts`**, and components only read from it. The s
 
 - **Developer CV** (`CV_Georgia_Developer_EN`): profile, skills, projects, experience, education, links and photo. The text is translated faithfully into Swedish.
 - **Swedish CV** (`CV Georgia Chalkia`): only the 7 courses under *Certifieringar & kurser*.
-- **Years:** the developer CV has placeholders (`[year]`, `[University]`), so years are left out on purpose. Only *“Pågående · examen 2026”* (NBI) and *“– nu”* (GMed) are shown, because the CV states them.
-- **Achievements:** omitted, because the CV has no numbers, ranks or honours. `ACHIEVEMENTS` is an empty array; the section and its nav link don't exist.
+- **Years and schools:** the developer CV had placeholders (`[year]`, `[University]`). They are filled in from the Swedish CV (approved by Georgia). GMed Consulting AB's start year is in neither CV, so it shows *“– nu”*.
+- **Meriter (achievements):** only figures the CVs state — 12+ years in healthcare, 4 languages, 9 certifications and courses.
 - **Repo links:** projects have none in the CV, so no “Visa på GitHub” buttons render. Add `github: "https://…"` to a project in `data.ts` and the button appears.
-- **Résumé download:** `public/CV-Georgia-Chalkia.pdf` is a print of the developer CV HTML. ⚠️ It still contains the CV's own `[year]` / `[University]` placeholders. Replace this file with a finished PDF before going live.
+- **Résumé download:** `public/CV-Georgia-Chalkia.pdf` is printed from `cv/CV_Georgia_Developer_EN.html`. To update it, edit the HTML and run:
+  `google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=public/CV-Georgia-Chalkia.pdf cv/CV_Georgia_Developer_EN.html`
 
 ## Sections
 
@@ -35,7 +36,8 @@ All text lives in **`src/lib/data.ts`**, and components only read from it. The s
 | 03 | Utvalda projekt | `projekt` | `sections/Work.tsx` | Expanding accordion (flex 1 → 8), vertical spines, clip-path wipe on an *Illustrativt UI* |
 | 04 | Certifieringar & kurser | `certifieringar` | `sections/Certifications.tsx` | Sticky heading, ink-flood rows |
 | 05 | Erfarenhet & utbildning | `erfarenhet` | `sections/Experience.tsx` | Spine drawn by scroll progress, stops light up, dashed “Nästa — ditt team?” card |
-| 06 | Kontakt | `kontakt` | `sections/Contact.tsx` | Letter hop on hover, copy-email chip (`aria-live`), spinning “säg hej” badge, footer |
+| 06 | Meriter | `meriter` | `sections/Achievements.tsx` | Pinned horizontal gallery, progress bar, count-up numbers (easeOutQuart 1.4 s), centre card lifts 12 px |
+| 07 | Kontakt | `kontakt` | `sections/Contact.tsx` | Letter hop on hover, copy-email chip (`aria-live`), spinning “säg hej” badge, footer |
 
 Shared pieces: `ui/RevealObserver.tsx` (`.rv` / `.rv-mask` → `.is-in`, once), `ui/SectionHead.tsx`, `ui/TechLogo.tsx` (`BRAND` + `CONCEPT` maps, `isBrand()`), `lib/hooks.ts` (`useInView`, `useScrollProgress`, `prefersReducedMotion`, `useMedia`) and `lib/scroll.tsx` (Lenis + `scrollToTarget`).
 
