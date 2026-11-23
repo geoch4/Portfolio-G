@@ -116,9 +116,9 @@ export default function About() {
                   <p className="id-name">{PROFILE.name}</p>
                   <p className="id-role">{PROFILE.role} · {PROFILE.roleSecond}</p>
                   <dl className="id-rows mono">
-                    <div><dt>ID nr</dt><dd>{PROFILE.initials}-{PROFILE.graduation}</dd></div>
-                    <div><dt>Avd.</dt><dd>.NET · Vård</dd></div>
-                    <div><dt>Giltig t.o.m.</dt><dd>{PROFILE.graduation}</dd></div>
+                    <div><dt>Ort</dt><dd>{PROFILE.city}</dd></div>
+                    <div><dt>Språk</dt><dd>{PROFILE.languages.length}</dd></div>
+                    <div><dt>Examen</dt><dd>{PROFILE.graduation}</dd></div>
                   </dl>
                   <div className="id-foot">
                     <Barcode seed={PROFILE.name + PROFILE.email} />
